@@ -14,7 +14,7 @@ from cv_bridge import CvBridge
 ALGO_VERSION = os.getenv("MODEL_NAME")
 
 if not ALGO_VERSION:
-    ALGO_VERSION = '<default here>'
+    ALGO_VERSION = 'facebook/detr-resnet-50'
 
 
 def predict(image: Image):
@@ -114,12 +114,12 @@ class RosIO(Node):
                 w = result['boxes'][2]
                 h = result['boxes'][3]
                 converted_image = cv2.rectangle(converted_image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-            self.image_publisher.publish(bridge.cv2_to_imgmsg(converted_image)
+            self.image_publisher.publish(bridge.cv2_to_imgmsg(converted_image))
 
         if self.get_parameter('pub_detections').value:
             labels: torch.Tensor = result['labels']
             detections = ' '.join(labels.tolist())
-            self.detection_publisher.publish()
+            self.detection_publisher.publish(detections)
 
         if self.get_parameter('pub_boxes').value:
             arr = self.get_detection_arr(result)
