@@ -41,26 +41,26 @@ class RosIO(Node):
         self.declare_parameter('pub_detections', True)
         self.image_subscription = self.create_subscription(
             Image,
-            '/<name>/sub/image_raw',
+            '/detr_det/image_raw',
             self.listener_callback,
             10
         )
 
         self.image_publisher = self.create_publisher(
             Image,
-            '/<name>/pub/image',
+            '/detr_det/image',
             1
         )
 
         self.detection_publisher = self.create_publisher(
             String,
-            '/<name>/pub/detections',
+            '/detr_det/detections',
             1
         )
     
         self.boxes_publisher = self.create_publisher(
             String,
-            '/<name>/pub/detection_boxes',
+            '/detr_det/detection_boxes',
             1
         )
 
@@ -129,7 +129,7 @@ class RosIO(Node):
 
 
 def main(args=None):
-    print('<name> Started')
+    print('detr_det Started')
 
     rclpy.init(args=args)
 
