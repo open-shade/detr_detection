@@ -6,7 +6,6 @@ This is a ROS2 wrapper for the DEtection TRansformer (DETR). We utilize `hugging
 
 # Installation Guide
 
-
 ## Using Docker Pull
 1. Install [Docker](https://www.docker.com/) and ensure the Docker daemon is running in the background.
 2. Run ```docker pull shaderobotics/detr-detection:${ROS2_DISTRO}-${MODEL_VERSION}```
