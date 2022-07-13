@@ -24,7 +24,7 @@ This is a ROS2 wrapper for the [DEtection TRansformer (DETR)](https://arxiv.org/
 * ```resnet-50```
 * ```resnet-101```
 
-More information about these versions can be found in the [paper](https://arxiv.org/abs/2106.00666). The versions represent the different backbones (with `resnet-101` being larger)
+More information about these versions can be found in the [paper](https://arxiv.org/abs/2005.12872). The versions represent the different backbones (with `resnet-101` being larger)
 
 ## Example Docker Command
 
