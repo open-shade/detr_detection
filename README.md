@@ -1,6 +1,6 @@
 # DETR-Detection-ROS2 Wrapper
 
-This is a ROS2 wrapper for the DEtection TRansformer (DETR). We utilize `huggingface` and the `transformers` for the [source of the algorithm](https://huggingface.co/facebook/detr-resnet-50-panoptic). The main idea is for this container to act as a standalone interface and node, removing the necessity to integrate separate packages and solve numerous dependency issues.
+This is a ROS2 wrapper for the DEtection TRansformer (DETR). We utilize `huggingface` and the `transformers` for the [source of the algorithm](https://huggingface.co/facebook/detr-resnet-50). The main idea is for this container to act as a standalone interface and node, removing the necessity to integrate separate packages and solve numerous dependency issues.
 
 *From Paper*: The main ingredients of the new framework, called DEtection TRansformer or DETR, are a set-based global loss that forces unique predictions via bipartite matching, and a transformer encoder-decoder architecture. Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel. The new model is conceptually simple and does not require a specialized library, unlike many other modern detectors.
 
